@@ -1,0 +1,85 @@
+#dropdownMenu1 {
+  float: right;
+  padding-right: 10%;
+  height: 50px;
+  width: 220px;
+}
+
+.container {
+  text-align: center;
+}
+
+#dropdownMenu2 {
+  height: 50px;
+  width: 220px;
+  float: left;
+}
+
+#dropdownMenu3 {
+  height: 50px;
+  width: 220px;
+  float: right;
+}
+
+/* Checking css connected to html */
+
+body {
+  background-image: url("ent5.jpg");
+  background-size: cover;
+}
+
+.footer {
+  background-color: rgb(48, 47, 47);
+  color: cornsilk;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  height: 2.5rem;
+}
+
+#privacy {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+.collapse-navbar-collapse {
+  color: white;
+}
+
+/* YELP STUFF | THIS CAN BE DELETED */
+.wrapperOne {
+  color: white;
+  float: left;
+}
+
+#formOne {
+  display: flex;
+  justify-content: center;
+}
+
+/* END OF YELP STUFF
+​
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+}
+
+​
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+}
+
+​
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+}
+
+​
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+}
