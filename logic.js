@@ -29,19 +29,26 @@ function searchYelp(userLocation, foodChoice) {
       location: userLocation
     }
   })
-
     .then(function(response) {
       console.log(response);
       foodChoice = "";
       $("#typeHere").val("");
       console.log(foodChoice);
       //console.table(response.businesses);
-      var getName = $(".restaurant-name").text(response.businesses[0].name);
+      var randomIndex = Math.floor(
+        //Chris added this section from Kev //
+        Math.random() * (response.businesses.length - 1)
+      );
+      console.log(response);
+      var getName = $(".restaurant-name").text(
+        response.businesses[randomIndex].name
+      );
       console.log(getName);
 
+      // Chris added this section
       Swal.fire({
-        title: response.businesses[0].name,
-        text: response.businesses[0].location.address1,
+        title: response.businesses[randomIndex].name,
+        text: response.businesses[randomIndex].location.address1,
         imageUrl: "https://unsplash.it/400/200",
         imageWidth: 400,
         imageHeight: 200,
@@ -49,38 +56,35 @@ function searchYelp(userLocation, foodChoice) {
         animation: false
       });
 
-      // var getDeliver = $(".restaurant-deliver").text(response.businesses[0].transactions[0]);
-      //console.log(getDeliver)
-
       var getAddressStreetOne = $(".restaurant-address").text(
-        response.businesses[0].location.address1
+        response.businesses[randomIndex].location.address1
       );
       console.log(getAddressStreetOne);
 
       var getAddressStreetTwo = $(".restaurant-address").append(
-        " " + response.businesses[0].location.address2
+        " " + response.businesses[randomIndex].location.address2
       );
       console.log(
         getAddressStreetTwo
       ); /* This is for the second address line. ie if there is an apartment number/suite number it'll list here. THIS NEEDS TO BE TESTED ON A WORKING SUITE/APRT ADDRESS*/
 
       var getAddressCity = $(".restaurant-address-city").text(
-        " " + response.businesses[0].location.city
+        " " + response.businesses[randomIndex].location.city
       );
       console.log(getAddressCity);
 
       var getAddressZip = $(".restaurant-address-zip").text(
-        " " + response.businesses[0].location.zip_code
+        " " + response.businesses[randomIndex].location.zip_code
       );
       console.log(getAddressZip);
 
       var getPhone = $(".restaurant-phone").text(
-        "Phone: " + response.businesses[0].phone
+        "Phone: " + response.businesses[randomIndex].phone
       );
       console.log(getPhone);
 
       var getRating = $(".restaurant-rating").text(
-        "Rating: " + response.businesses[0].rating + "/5"
+        "Rating: " + response.businesses[randomIndex].rating + "/5"
       );
 
       console.log(getRating);
@@ -89,10 +93,14 @@ function searchYelp(userLocation, foodChoice) {
         //console.table(e.transactions);
       });
 
-      console.log(response.businesses[0].transactions);
-      if (response.businesses[0].transactions.indexOf("delivery") > -1) {
+      console.log(response.businesses[randomIndex].transactions);
+      if (
+        response.businesses[randomIndex].transactions.indexOf("delivery") > -1
+      ) {
         $(".restaurant-deliver").text("Delivery Available!");
-        console.log(response.businesses[0].transactions.indexOf("delivery"));
+        console.log(
+          response.businesses[randomIndex].transactions.indexOf("delivery")
+        );
       } else {
         $(".restaurant-deliver").text("Pickup Only");
       }
@@ -116,6 +124,12 @@ $("#btnOne").on("click", function(event) {
     alert("USE SWEETALERT");
   }
 });
+
+// Chris testing Kevin's randomization
+function RandoResults() {
+  var randomText = response.businessses.results[randomIndex];
+  $("WHERE??").text(randomText);
+}
 
 $("#dropdownMenu2").on("click", function(event) {
   event.preventDefault();
