@@ -50,13 +50,17 @@ body {
 
 /* YELP STUFF | THIS CAN BE DELETED */
 .wrapperOne {
-  color: white;
+  color: black;
   float: left;
 }
 
 #formOne {
   display: flex;
   justify-content: center;
+}
+
+.high-card {
+  color: antiquewhite;
 }
 
 /* END OF YELP STUFF
