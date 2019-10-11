@@ -48,8 +48,17 @@ function searchYelp(userLocation, foodChoice) {
       // Chris added this section
       Swal.fire({
         title: response.businesses[randomIndex].name,
-        text: response.businesses[randomIndex].location.address1,
-        imageUrl: "https://unsplash.it/400/200",
+
+        html: `<div class="results">
+        <div class="restaurant-deliver"> ${response.businesses[randomIndex].transactions}</div>
+        <div class="food-result"> Address: ${response.businesses[randomIndex].location.address1}</div>
+        <div class="food-result">${response.businesses[randomIndex].location.address2}</div>
+        <div class="food-result"> City: ${response.businesses[randomIndex].location.city}</div>
+        <div class="food-result"> Zip: ${response.businesses[randomIndex].location.zip_code}</div>
+        <div class="food-result"> Phone #: ${response.businesses[randomIndex].phone}</div>
+        <div class="food-result"> Yelp Rating: ${response.businesses[randomIndex].rating}/5</div>        
+      </div>
+              `,
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: "Custom image",

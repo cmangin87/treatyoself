@@ -59,8 +59,13 @@ body {
   justify-content: center;
 }
 
+<<<<<<< HEAD:assets/css/style.css
 .high-card {
   color: antiquewhite;
+=======
+.food-result {
+  font-size: 20px;
+>>>>>>> 274290ad77dff0267409b9c891121f4f084e4c45:style.css
 }
 
 /* END OF YELP STUFF
