@@ -59,6 +59,10 @@ body {
   justify-content: center;
 }
 
+.food-result {
+  font-size: 20px;
+}
+
 /* END OF YELP STUFF
 ​
 /* Small devices (landscape phones, 576px and up) */
