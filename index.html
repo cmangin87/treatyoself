@@ -1,277 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 1</title>
-    <link rel="shortcut icon" type="image/jpg" href="pot.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html"
-        ><img
-          src="002.jpg"
-          width="30"
-          height="30"
-          class="d-inline-block align-top"
-          alt=""
-        />
-        The Name of Our Project</a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Project 1</title>
+  <link rel="shortcut icon" type="image/jpg" href="assets/css/pot.jpg" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-utensils "></i>
+      
+      The Name of Our Project
+      
+      <i class=" fas fa-film"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html">
+            <i class="fa fa-address-book" aria-hidden="true"></i> Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br /><br />
+
+  <div class="container">
+    <div class="dropdown2">
+      <button class="btn btn-secondary btn-danger btn-lg dropdown-toggle" class="inline1" type="button"
+        id="dropdownMenu2" data-toggle="dropdown">
+        <i class="fa fa-cutlery" aria-hidden="true"></i>
+        Food Cuisines
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index2.html">
-              <i class="fa fa-address-book" aria-hidden="true"></i> Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <br /><br />
-
-    <div class="container">
-      <div class="dropdown2">
-        <button
-          class="btn btn-secondary btn-danger btn-lg dropdown-toggle"
-          class="inline1"
-          type="button"
-          id="dropdownMenu2"
-          data-toggle="dropdown"
-        >
-          <i class="fa fa-cutlery" aria-hidden="true"></i>
-          Food Cuisines
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item food-search" type="button" value="italian">
+          Italian
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="italian"
-          >
-            Italian
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="mexican "
-          >
-            Mexican
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="japanese"
-          >
-            Japanese
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="Indian"
-          >
-            Indian
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="fastfood"
-          >
-            Fast Food
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="chinese"
-          >
-            Chinese
-          </button>
-          <button class="dropdown-item food-search" type="button" value="thai">
-            Thai
-          </button>
-          <button class="dropdown-item food-search" type="button" value="greek">
-            Greek
-          </button>
-          <button class="dropdown-item food-search" type="button" value="bbq">
-            BBQ
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="spanish"
-          >
-            Spanish
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="seafood"
-          >
-            Seafood
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="portuguese"
-          >
-            Portuguese
-          </button>
-        </div>
-      </div>
-
-      <div class="dropdown3">
-        <button
-          class="btn btn-secondary btn-warning btn-lg dropdown-toggle"
-          class="inline2"
-          type="button"
-          id="dropdownMenu3"
-          data-toggle="dropdown"
-        >
-          <i class="fa fa-video-camera" aria-hidden="true"></i>
-          Movie Genres
+        <button class="dropdown-item food-search" type="button" value="mexican ">
+          Mexican
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="drama"
-          >
-            Drama
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="comedy"
-          >
-            Comedy
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="horror"
-          >
-            Horror
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="romance"
-          >
-            Romance
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="sci-fi"
-          >
-            Sci-Fi
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="action"
-          >
-            Action
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="documentary"
-          >
-            Documentary
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="romcom"
-          >
-            Rom-Com
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="animated"
-          >
-            Animated
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="thriller"
-          >
-            Thriller
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="western"
-          >
-            Western
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="indie"
-          >
-            Indie
-          </button>
-        </div>
+        <button class="dropdown-item food-search" type="button" value="japanese">
+          Japanese
+        </button>
+        <button class="dropdown-item food-search" type="button" value="Indian">
+          Indian
+        </button>
+        <button class="dropdown-item food-search" type="button" value="fastfood">
+          Fast Food
+        </button>
+        <button class="dropdown-item food-search" type="button" value="chinese">
+          Chinese
+        </button>
+        <button class="dropdown-item food-search" type="button" value="thai">
+          Thai
+        </button>
+        <button class="dropdown-item food-search" type="button" value="greek">
+          Greek
+        </button>
+        <button class="dropdown-item food-search" type="button" value="bbq">
+          BBQ
+        </button>
+        <button class="dropdown-item food-search" type="button" value="spanish">
+          Spanish
+        </button>
+        <button class="dropdown-item food-search" type="button" value="seafood">
+          Seafood
+        </button>
+        <button class="dropdown-item food-search" type="button" value="portuguese">
+          Portuguese
+        </button>
       </div>
     </div>
-    <!-- Yelp Input field & button, field takes 5 numbers only -->
-    <form id="formOne">
-      <input id="typeHere" />
-      <button id="btnOne">Enter Zip Code</button>
-    </form>
-    <!-- THE YELP STUFF | IT'S IN THE CSS AS "wrapperOne" SO YOU CAN CLEARLY SEE THE TEXT -->
-    <div class="wrapperOne">
-      <div class="restaurant-name"></div>
-      <div class="restaurant-deliver"></div>
-      <div class="restaurant-address"></div>
-      <div class="restaurant-address-city"></div>
-      <div class="restaurant-address-zip"></div>
-      <div class="restaurant-phone"></div>
-      <div class="restaurant-rating"></div>
+
+    <div class="dropdown3">
+      <button class="btn btn-secondary btn-warning btn-lg dropdown-toggle" class="inline2" type="button"
+        id="dropdownMenu3" data-toggle="dropdown">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+        Movie Genres
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item genre-search" type="button" value="drama">
+          Drama
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="comedy">
+          Comedy
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="horror">
+          Horror
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="romance">
+          Romance
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="sci-fi">
+          Sci-Fi
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="action">
+          Action
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="documentary">
+          Documentary
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="romcom">
+          Rom-Com
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="animated">
+          Animated
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="thriller">
+          Thriller
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="western">
+          Western
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="indie">
+          Indie
+        </button>
+      </div>
     </div>
-    <!-- END OF YELP STUFF -->
-    <div class="footer">
-      <footer>
-        <p id="privacy">
-          <i class="fa fa-handshake-o" aria-hidden="true"></i> Privacy
-        </p>
-      </footer>
-    </div>
+  </div>
+  <!-- Yelp Input field & button, field takes 5 numbers only -->
+  <form id="formOne">
+    <input id="typeHere" />
+    <button id="btnOne">Enter Zip Code</button>
+  </form>
+  <!-- THE YELP STUFF | IT'S IN THE CSS AS "wrapperOne" SO YOU CAN CLEARLY SEE THE TEXT -->
+  <div class="wrapperOne">
+    <div class="restaurant-name"></div>
+    <div class="restaurant-deliver"></div>
+    <div class="restaurant-address"></div>
+    <div class="restaurant-address-city"></div>
+    <div class="restaurant-address-zip"></div>
+    <div class="restaurant-phone"></div>
+    <div class="restaurant-rating"></div>
+  </div>
+  <!-- END OF YELP STUFF -->
+  <div class="footer">
+    <footer>
+      <p id="privacy">
+        <i class="fa fa-handshake-o" aria-hidden="true"></i> Privacy
+      </p>
+    </footer>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
-    <script src="logic.js"></script>
-  </body>
+  <script src="assets/javascript/logic.js"></script>
+</body>
+
 </html>
