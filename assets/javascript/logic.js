@@ -161,6 +161,7 @@ $(".food-search").on("click", function (event) {
 $(".genre-search").on("click", function (event) {
   var movieSearchTerm = event.target.value;
   console.log(movieSearchTerm);
+  searchMovie(movieSearchTerm);
 });
 
 // ----- TO DO ----
@@ -290,10 +291,12 @@ $("#quizBtn").on("click", function () {
   })
 });
 // AJAX FUNCTION TMDB
-var movieAPI = "9c78f7f7ceee5681298aabdde3007043";
-var movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + movieAPI + "&with_genres=" + $(".genre-search").val();
-function searchMovie() {
-  $.ajax({
+
+function searchMovie(movieSearchTerm) {
+  var movieAPI = "9c78f7f7ceee5681298aabdde3007043";
+  var movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + movieAPI + "&with_genres=" + movieSearchTerm;
+
+    $.ajax({
       type: "GET",
       url: movieURL,
       header: {
