@@ -11,6 +11,8 @@
 
 //--------------------- KEVS STUFF ------------------
 // --------------- VARS
+$(document).ready(function(){
+
 var yelpKey =
   "WryFK_Fia6X6mI7Qo4GXKpsgXq28PtJo4fj-JCC53ggv5E7izVZ--ynGA62pamf8jZgp-o7nqhqV1EEODABa0bZYmHX8bI7S-DZMtDQv0Ws0WDImLt2JRL_u31OfXXYx";
 var yelpQueryURL = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search`;
@@ -129,6 +131,7 @@ $("#btnOne").on("click", function (event) {
   if (zipNum.length === 5 && zipNum.match(/^\d+$/) && foodChoice !== "") {
     console.log("zipcode = 5");
     searchYelp(zipNum, foodChoice);
+    searchMovie();
   } else {
     alert("USE SWEETALERT");
   }
@@ -156,8 +159,8 @@ $(".food-search").on("click", function (event) {
 });
 
 $(".genre-search").on("click", function (event) {
-  var searchTerm = event.target.value;
-  console.log(searchTerm);
+  var movieSearchTerm = event.target.value;
+  console.log(movieSearchTerm);
 });
 
 // ----- TO DO ----
@@ -285,6 +288,41 @@ $("#quizBtn").on("click", function () {
     }
   
   })
+});
+// AJAX FUNCTION TMDB
+var movieAPI = "9c78f7f7ceee5681298aabdde3007043";
+var movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + movieAPI + "&with_genres=" + $(".genre-search").val();
+function searchMovie() {
+  $.ajax({
+      type: "GET",
+      url: movieURL,
+      header: {
+        authorization: "Bearer " + movieAPI
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+      console.log(movieURL);
+      var randomMovieIndex = Math.floor(Math.random() * (response.results.length - 1));
+      var getMovieName = $(".movie-title").text(
+        response.results[randomMovieIndex].original_title
+      );
+      
+      var getMoviePoster = $("<img>");
+      getMoviePoster.attr("src", "https://image.tmdb.org/t/p/w200" + response.results[randomMovieIndex].poster_path);
+      var getMoviePlot = $(".movie-plot").text(
+        response.results[randomMovieIndex].overview
+      );
+      $(".movie-title").prepend(getMovieName);
+      $(".movie-poster").append(getMoviePoster);
+      $(".movie-plot").append(getMoviePlot);
+    })
+
+
+  }
+
+
+
 
 
 
