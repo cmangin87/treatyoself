@@ -154,16 +154,19 @@ $("#dropdownMenu2").on("click", function (event) {
 
 $(".food-search").on("click", function (event) {
   var searchTerm = event.target.value;
+  var foodString = $(this).text();
   foodChoice = searchTerm;
   console.log(foodChoice);
+  $("#dropdownMenu2").text(foodString);
 });
 
-$(".genre-search").on("click", function (event) {
+$(".genre-search").on("click", function(event) {
   var movieSearchTerm = event.target.value;
+  var movieSearchString = $(this).text();
   console.log(movieSearchTerm);
   searchMovie(movieSearchTerm);
+  $("#dropdownMenu3").text(movieSearchString);
 });
-
 // ----- TO DO ----
 // Randomize restaurant results - for loop
 // THERE IS A SECOND ADDRESS LINE FOR SUITE AND APARTMENTS, DON'T FORGET IN THE CSS.
