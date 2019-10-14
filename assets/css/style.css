@@ -5,20 +5,36 @@
   width: 220px;
 }
 
-.container {
+.col-md-4 {
   text-align: center;
+}
+
+#formOne {
+  float: left;
+  margin: 1em auto auto 1.25em;
 }
 
 #dropdownMenu2 {
   height: 50px;
-  width: 220px;
+  width: 15em;
   float: left;
+  margin: auto auto auto 1em;
 }
 
 #dropdownMenu3 {
   height: 50px;
-  width: 220px;
+  width: 15em;
   float: right;
+  margin: auto 1em auto auto;
+}
+
+#outputRow {
+  margin: 1em 1em auto 1em;
+}
+
+.wrapperTwo {
+  border: 1px 1px 1px 1px;
+  border-color: brown
 }
 
 /* Checking css connected to html */
