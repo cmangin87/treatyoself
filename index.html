@@ -55,199 +55,145 @@
     </nav>
     <br /><br />
 
-    <div class="container">
-      <div class="dropdown2">
-        <button
-          class="btn btn-secondary btn-danger btn-lg dropdown-toggle"
-          class="inline1"
-          type="button"
-          id="dropdownMenu2"
-          data-toggle="dropdown"
-        >
-          <i class="fas fa-utensils "></i>
-          <i class="fa fa-cutlery" aria-hidden="true"></i>
-          Food Cuisines
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="italian"
-          >
-            Italian
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="mexican "
-          >
-            Mexican
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="japanese"
-          >
-            Japanese
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="Indian"
-          >
-            Indian
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="fastfood"
-          >
-            Fast Food
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="chinese"
-          >
-            Chinese
-          </button>
-          <button class="dropdown-item food-search" type="button" value="thai">
-            Thai
-          </button>
-          <button class="dropdown-item food-search" type="button" value="greek">
-            Greek
-          </button>
-          <button class="dropdown-item food-search" type="button" value="bbq">
-            BBQ
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="spanish"
-          >
-            Spanish
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="seafood"
-          >
-            Seafood
-          </button>
-          <button
-            class="dropdown-item food-search"
-            type="button"
-            value="portuguese"
-          >
-            Portuguese
-          </button>
-        </div>
-      </div>
-
-      <div class="dropdown3">
-        <button
-          class="btn btn-secondary btn-warning btn-lg dropdown-toggle"
-          class="inline2"
-          type="button"
-          id="dropdownMenu3"
-          data-toggle="dropdown"
-        >
-          <i class=" fas fa-film"></i>
-          <i class="fa fa-video-camera" aria-hidden="true"></i>
-          Movie Genres
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item genre-search" type="button" value="18">
-            Drama
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="35">
-            Comedy
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="27">
-            Horror
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="10749"
-          >
-            Romance
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="878">
-            Sci-Fi
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="28">
-            Action
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="99">
-            Documentary
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="romcom"
-          >
-            Rom-Com
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="16">
-            Animated
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="53">
-            Thriller
-          </button>
-          <button class="dropdown-item genre-search" type="button" value="37">
-            Western
-          </button>
-          <button
-            class="dropdown-item genre-search"
-            type="button"
-            value="indie"
-          >
-            Indie
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Yelp Input field & button, field takes 5 numbers only -->
-    <form id="formOne">
-      <input id="typeHere" />
-      <button id="btnOne">Enter Zip Code</button>
-    </form>
-    <!-- THE YELP STUFF | IT'S IN THE CSS AS "wrapperOne" SO YOU CAN CLEARLY SEE THE TEXT -->
-    <div class="wrapperOne">
-      <div class="restaurant-name"></div>
-      <div class="restaurant-deliver"></div>
-      <div class="restaurant-address"></div>
-      <div class="restaurant-address-city"></div>
-      <div class="restaurant-address-zip"></div>
-      <div class="restaurant-phone"></div>
-      <div class="restaurant-rating"></div>
-    </div>
-    <div class="jaketest">
-      <button id="quizBtn">
-        Click me!
+<div class="row">
+  <div class="col-md-4">
+    <div class="dropdown2">
+      <button class="btn btn-secondary btn-danger btn-lg dropdown-toggle" class="inline1" type="button"
+        id="dropdownMenu2" data-toggle="dropdown">
+        <i class="fa fa-cutlery" aria-hidden="true"></i>
+        Food Cuisines
       </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item food-search" type="button" value="italian">
+          Italian
+        </button>
+        <button class="dropdown-item food-search" type="button" value="mexican ">
+          Mexican
+        </button>
+        <button class="dropdown-item food-search" type="button" value="japanese">
+          Japanese
+        </button>
+        <button class="dropdown-item food-search" type="button" value="Indian">
+          Indian
+        </button>
+        <button class="dropdown-item food-search" type="button" value="fastfood">
+          Fast Food
+        </button>
+        <button class="dropdown-item food-search" type="button" value="chinese">
+          Chinese
+        </button>
+        <button class="dropdown-item food-search" type="button" value="thai">
+          Thai
+        </button>
+        <button class="dropdown-item food-search" type="button" value="greek">
+          Greek
+        </button>
+        <button class="dropdown-item food-search" type="button" value="bbq">
+          BBQ
+        </button>
+        <button class="dropdown-item food-search" type="button" value="spanish">
+          Spanish
+        </button>
+        <button class="dropdown-item food-search" type="button" value="seafood">
+          Seafood
+        </button>
+        <button class="dropdown-item food-search" type="button" value="portuguese">
+          Portuguese
+        </button>
+      </div>
     </div>
-    <div class="wrapperTwo">
-      <div class="movie-title"></div>
-      <div class="movie-poster"></div>
-      <div class="movie-plot"></div>
-      <div class="movie-rating"></div>
+<form id="formOne">
+    <input id="typeHere" />
+    <button id="btnOne">Enter Zip Code</button>
+  </form>
+</div>
+<div class="col-md-4">
+  <button id="random">Randomize!</button>
+</div>
+  <div class="col-md-4">
+    <div class="dropdown3">
+      <button class="btn btn-secondary btn-warning btn-lg dropdown-toggle" class="inline2" type="button"
+        id="dropdownMenu3" data-toggle="dropdown">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+        Movie Genres
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item genre-search" type="button" value="18">
+          Drama
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="35">
+          Comedy
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="27">
+          Horror
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="10749">
+          Romance
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="878">
+          Sci-Fi
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="28">
+          Action
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="99">
+          Documentary
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="romcom">
+          Rom-Com
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="16">
+          Animated
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="53">
+          Thriller
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="37">
+          Western
+        </button>
+        <button class="dropdown-item genre-search" type="button" value="indie">
+          Indie
+        </button>
+      </div>
     </div>
-    <!-- END OF YELP STUFF -->
-    <div class="footer">
-      <footer>
-        <p id="privacy">
-           &copy; Joe Han's class 2019 ~ Powered by <a href="https://www.yelp.com/" id="brand">Yelp</a> and <a href="https://www.themoviedb.org/?language=en-US" id="brand">The Movie Database</a>
-        </p>
-      </footer>
-    </div>
+  </div>
+</div>
+  <!-- Yelp Input field & button, field takes 5 numbers only -->
+  
+  <!-- THE YELP STUFF | IT'S IN THE CSS AS "wrapperOne" SO YOU CAN CLEARLY SEE THE TEXT -->
+<div class="row" id="outputRow"> 
+  <div class="wrapperOne col-md-4">
+    <div class="restaurant-name"></div>
+    <div class="restaurant-deliver"></div>
+    <div class="restaurant-address"></div>
+    <div class="restaurant-address-city"></div>
+    <div class="restaurant-address-zip"></div>
+    <div class="restaurant-phone"></div>
+    <div class="restaurant-rating"></div>
+  </div>
+  <div class="col-md-4"></div>
+  <div class="wrapperTwo col-md-4">
+    <div class="movie-title"></div>
+    <div class="movie-poster"></div>
+    <div class="movie-plot"></div>
+    <div class="movie-rating"></div>
+  </div>
+</div>
+  <!-- END OF YELP STUFF -->
+  <div class="footer">
+    <footer>
+      <p id="privacy">
+         &copy; Joe Han's class 2019 ~ Powered by <a href="https://www.yelp.com/" id="brand">Yelp</a> and <a href="https://www.themoviedb.org/?language=en-US" id="brand">The Movie Database</a>
+      </p>
+    </footer>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="./assets/javascript/logic.js"></script>
 
   </body>
 </html>
