@@ -179,83 +179,9 @@ $(document).ready(function () {
       //Edit CSS to reformat buttons and pages
 
 
-      $("#quizBtn").on("click", function () {
-        swal.queue([
-          // Step 0
-          {
-            title: "We're gonna ask you a few questions!",
-            confirmButtonText: 'Next &rarr;'
-          },
 
-          // Step 1
-          {
-            title: 'What is your favorite type of food!',
-            input: 'select',
-            inputOptions: {
-              italian: 'Italian',
-              mexican: 'Mexican',
-              japanese: 'Japanese',
-              indian: 'Indian',
-              fastfood: 'Fast Food',
-              chinese: 'Chinese',
-              thai: 'Thai',
-              greek: 'Greek',
-              bbq: 'Barbecue',
-              spanish: 'spanish'
-            },
-            inputPlaceholder: 'Select a food type',
-            showCancelButton: false,
-            confirmButtonText: "Continue &rarr; ",
-            inputValidator: (value) => {
-              return !value && 'You need to pick something!'
-            }
-          },
-          {
-            title: 'Choose your favorite movie genre!',
-            input: 'select',
-            inputOptions: {
-              action: 'Action',
-              animated: 'Animated',
-              comedy: 'Comedy',
-              drama: 'Drama',
-              horror: 'Horror',
-              romance: 'Romance',
-              romcom: 'Romantic Comedy',
-              scifi: 'Sci-Fi',
-              thriller: 'Thriller'
-            },
-            inputPlaceholder: 'Select a movie genre',
-            showCancelButton: false,
-            confirmButtonText: "Continue &rarr; ",
-            inputValidator: (value) => {
-              return !value && 'You need to pick something!'
-            }
-          },
-          {
-            title: 'Enter your zipcode!',
-            input: 'text',
-            inputValue: '',
-            inputPlaceholder: '00000',
-            inputValidator: (value) => {
-              return !value && 'You need to pick something!'
-            }
-          },
-          {
-            title: 'Are you high?',
-            input: 'select',
-            inputOptions: {
-              high: 'Absolutely!',
-              definitelyhigh: 'Not sure..',
-              not: 'Nope!'
-            },
-            inputPlaceholder: 'Well are you?',
-            showCancelButton: false,
-            confirmButtonText: "Finish!",
-            inputValidator: (value) => {
-              return !value && 'You need to pick something!'
-            }
-          }
-        });
+      
+
 
         // Chris testing Kevin's randomization
         // var randomArray = [];
@@ -268,22 +194,6 @@ $(document).ready(function () {
 
         // }
 
-        $("#dropdownMenu2").on("click", function (event) {
-          event.preventDefault();
-        });
-
-        $(".food-search").on("click", function (event) {
-          var searchTerm = event.target.value;
-          foodChoice = searchTerm;
-          console.log(foodChoice);
-        });
-
-        $(".genre-search").on("click", function (event) {
-          var movieSearchTerm = event.target.value;
-          console.log(movieSearchTerm);
-          searchMovie(movieSearchTerm);
-        });
-
         // ----- TO DO ----
         // Randomize restaurant results - for loop
         // THERE IS A SECOND ADDRESS LINE FOR SUITE AND APARTMENTS, DON'T FORGET IN THE CSS.
@@ -295,117 +205,7 @@ $(document).ready(function () {
         // input movie database API
         //Edit CSS to reformat buttons and pages
 
-        $("#quizBtn").on("click", function () {
-          swal
-            .queue([
-              // Step 0
-              {
-                title: "We're gonna ask you a few questions!",
-                confirmButtonText: "Next &rarr;"
-              },
-
-              // Step 1
-              {
-                title: "What is your favorite type of food!",
-                input: "select",
-                inputOptions: {
-                  italian: "Italian",
-                  mexican: "Mexican",
-                  japanese: "Japanese",
-                  indian: "Indian",
-                  fastfood: "Fast Food",
-                  chinese: "Chinese",
-                  thai: "Thai",
-                  greek: "Greek",
-                  bbq: "Barbecue",
-                  spanish: "spanish"
-                },
-                inputPlaceholder: "Select a food type",
-                showCancelButton: false,
-                confirmButtonText: "Continue &rarr; ",
-                inputValidator: value => {
-                  return !value && "You need to pick something!";
-                }
-              },
-              {
-                title: "Choose your favorite movie genre!",
-                input: "select",
-                inputOptions: {
-                  action: "Action",
-                  animated: "Animated",
-                  comedy: "Comedy",
-                  drama: "Drama",
-                  horror: "Horror",
-                  romance: "Romance",
-                  romcom: "Romantic Comedy",
-                  scifi: "Sci-Fi",
-                  thriller: "Thriller"
-                },
-                inputPlaceholder: "Select a movie genre",
-                showCancelButton: false,
-                confirmButtonText: "Continue &rarr; ",
-                inputValidator: value => {
-                  return !value && "You need to pick something!";
-                }
-              },
-              {
-                title: "Enter your zipcode!",
-                input: "text",
-                inputValue: "",
-                inputPlaceholder: "00000",
-                inputValidator: value => {
-                  return !value && "You need to pick something!";
-                }
-              },
-              {
-                title: "Are you high?",
-                input: "select",
-                inputOptions: {
-                  high: "Absolutely!",
-                  definitelyhigh: "Not sure..",
-                  not: "Nope!"
-                },
-                inputPlaceholder: "Well are you?",
-                showCancelButton: false,
-                confirmButtonText: "Finish!",
-                inputValidator: value => {
-                  return !value && "You need to pick something!";
-                }
-              }
-            ])
-            .then(result => {
-              console.log(
-                result.value[1],
-                result.value[2],
-                result.value[3],
-                result.value[4]
-              );
-              zipNum = result.value[3];
-              searchTerm = result.value[1];
-              if (
-                result.value[4] === "high" ||
-                result.value[4] === "definitelyhigh"
-              ) {
-                swal.fire({
-                  title: "Randomized! Try something new!",
-                  customClass: "high-card",
-                  padding: "3em",
-                  background: "#fff url(assets/css/Trippy.jpg)",
-                  confirmButtonText: "Nice.",
-                  backdrop: `
-          rgba(0,0,123,0.4)
-          url("https://media.giphy.com/media/6wmz6Qo40eTDf4tW3Z/giphy.gif")
-          center top
-          no-repeat
-        `
-                });
-              } else {
-                swal.fire("Quiz Finished!", "Here are your results.", "success");
-
-                searchYelp(zipNum, foodChoice);
-              }
-            });
-        });
+        
         // AJAX FUNCTION TMDB
 
         function searchMovie(movieSearchTerm) {
