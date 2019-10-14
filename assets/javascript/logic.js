@@ -80,11 +80,9 @@ $(".wrapperTwo").hide();
               "Rating: " + response.businesses[randomIndex].rating + "/5"
             );
 
-            var restaurantImg = $("<img>");
-            $(restaurantImg).attr("src", response.businesses[randomIndex].image_url);
-            $(restaurantImg).attr("width", "200px");
-            $(restaurantImg).attr("height", "200px");
-            $(".restaurant-image").append(restaurantImg);
+            $("#restaurantImg").attr("src", response.businesses[randomIndex].image_url);
+            $("#restaurantImg").attr("width", "200px");
+            $("#restaurantImg").attr("height", "200px");
 
             console.log(getRating);
             //console.clear();
@@ -121,7 +119,6 @@ $(".wrapperOne").show();
         if (zipNum.length === 5 && zipNum.match(/^\d+$/) && foodChoice !== "") {
           console.log("zipcode = 5");
           searchYelp(zipNum, foodChoice);
-          searchMovie();
         } else {
           alert("USE SWEETALERT");
         }
@@ -224,8 +221,7 @@ $(".wrapperOne").show();
               response.results[randomMovieIndex].original_title
             );
 
-            var getMoviePoster = $("<img>");
-            getMoviePoster.attr(
+            $("#movieImg").attr(
               "src",
               "https://image.tmdb.org/t/p/w200" +
               response.results[randomMovieIndex].poster_path
@@ -234,7 +230,6 @@ $(".wrapperOne").show();
               response.results[randomMovieIndex].overview
             );
             $(".movie-title").prepend(getMovieName);
-            $(".movie-poster").append(getMoviePoster);
             $(".movie-plot").append(getMoviePlot);
           });
         }
