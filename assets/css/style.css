@@ -1,20 +1,11 @@
-#dropdownMenu1 {
-  float: right;
-  padding-right: 10%;
-  height: 50px;
-  width: 220px;
-}
-
-.col-md-4 {
+.container {
   text-align: center;
 }
-
-#formOne {
+s #formOne {
   float: left;
   margin: 1em auto auto 1.25em;
 }
-
-#dropdownMenu2 {
+s #dropdownMenu2 {
   height: 50px;
   width: 15em;
   float: left;
@@ -34,7 +25,7 @@
 
 .wrapperTwo {
   border: 1px 1px 1px 1px;
-  border-color: brown
+  border-color: brown;
 }
 
 /* Checking css connected to html */
@@ -42,6 +33,10 @@
 body {
   background-image: url("ent5.jpg");
   background-size: cover;
+}
+
+html {
+  height: 100%;
 }
 
 .footer {
@@ -60,10 +55,6 @@ body {
   font-size: 1rem;
 }
 
-.collapse-navbar-collapse {
-  color: white;
-}
-
 /* YELP STUFF | THIS CAN BE DELETED */
 .wrapperOne {
   color: black;
@@ -78,24 +69,3 @@ body {
 /* END OF YELP STUFF
 ​
 /* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) {
-}
-
-​
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-}
-
-​
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {
-}
-
-​
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-}
