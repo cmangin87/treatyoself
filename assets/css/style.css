@@ -1,3 +1,7 @@
+nav {
+  color: white;
+}
+
 
 #formOne {
   float: left;
@@ -90,6 +94,3 @@ html {
 .collapse-navbar-collapse {
   color: white;
 }
-
-​
-/* Small devices (landscape phones, 576px and up) */
