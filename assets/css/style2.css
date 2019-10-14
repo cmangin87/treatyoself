@@ -6,7 +6,7 @@ body {
 .footer {
   background-color: rgb(48, 47, 47);
   color: cornsilk;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   margin: auto;
@@ -47,26 +47,3 @@ img {
   background-color: rgba(169, 169, 169, 0.473);
 }
 ​
-
-/* Small devices (landscape phones, 576px and up) */
-
-@media (min-width: 576px) {
-}
-
-​
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-}
-
-​
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {
-}
-
-​
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-}
