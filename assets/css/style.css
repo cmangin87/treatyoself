@@ -28,19 +28,36 @@
   margin: auto 1em auto auto;
 }
 
+#dropdownRow {
+  margin: auto 1em auto 1em;
+}
+
 #outputRow {
   margin: 1em 1em auto 1em;
+  text-align: center;
+}
+
+.wrapperOne {
+  border: 1px solid brown;
+  background-color: white;
+  background: rgba(129, 141, 131, 0.5);
+  padding: 5px 5px 5px 5px;
+  margin-right: 5px;
 }
 
 .wrapperTwo {
-  border: 1px 1px 1px 1px;
-  border-color: brown
+  border: 1px solid brown;
+  background-color: white;
+  background: rgba(129, 141, 131, 0.5);
+  padding: 5px 5px 5px 5px;
+  margin-left: 5px;
 }
+
 
 /* Checking css connected to html */
 
 body {
-  background-image: url("ent5.jpg");
+  background-image: url("popcornbg.jpg");
   background-size: cover;
 }
 
@@ -64,18 +81,6 @@ body {
   color: white;
 }
 
-/* YELP STUFF | THIS CAN BE DELETED */
-.wrapperOne {
-  color: black;
-  float: left;
-}
-
-#formOne {
-  display: flex;
-  justify-content: center;
-}
-
-/* END OF YELP STUFF
 ​
 /* Small devices (landscape phones, 576px and up) */
 
