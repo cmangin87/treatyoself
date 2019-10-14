@@ -31,7 +31,7 @@ body {
 .footer {
   background-color: rgb(48, 47, 47);
   color: cornsilk;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   margin: auto;
