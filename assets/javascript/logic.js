@@ -120,7 +120,11 @@ $(".wrapperOne").show();
           console.log("zipcode = 5");
           searchYelp(zipNum, foodChoice);
         } else {
-          alert("USE SWEETALERT");
+          Swal.fire(
+            'Oh no!',
+            'You forgot to input your zip code!',
+            'error'
+          );
         }
       })
 
