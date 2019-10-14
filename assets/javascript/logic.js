@@ -18,6 +18,9 @@ $(document).ready(function () {
       var foodChoice = "";
 
       // ----- AJAX CALL FOR RESTAURANTS
+$(".wrapperOne").hide();
+$(".wrapperTwo").hide();
+
       function searchYelp(userLocation, foodChoice) {
         $.ajax({
             type: "GET",
@@ -45,26 +48,6 @@ $(document).ready(function () {
               response.businesses[randomIndex].name
             );
             console.log(getName);
-
-            // Chris added this section
-            Swal.fire({
-              title: response.businesses[randomIndex].name,
-
-              html: `<div class="results">
-        <div class="restaurant-deliver"> ${response.businesses[randomIndex].transactions}</div>
-        <div class="food-result"> Address: ${response.businesses[randomIndex].location.address1}</div>
-        <div class="food-result">${response.businesses[randomIndex].location.address2}</div>
-        <div class="food-result"> City: ${response.businesses[randomIndex].location.city}</div>
-        <div class="food-result"> Zip: ${response.businesses[randomIndex].location.zip_code}</div>
-        <div class="food-result"> Phone #: ${response.businesses[randomIndex].phone}</div>
-        <div class="food-result"> Yelp Rating: ${response.businesses[randomIndex].rating}/5</div>        
-      </div>
-              `,
-              imageWidth: 400,
-              imageHeight: 200,
-              imageAlt: "Custom image",
-              animation: true
-            });
 
             var getAddressStreetOne = $(".restaurant-address").text(
               response.businesses[randomIndex].location.address1
@@ -97,6 +80,12 @@ $(document).ready(function () {
               "Rating: " + response.businesses[randomIndex].rating + "/5"
             );
 
+            var restaurantImg = $("<img>");
+            $(restaurantImg).attr("src", response.businesses[randomIndex].image_url);
+            $(restaurantImg).attr("width", "200px");
+            $(restaurantImg).attr("height", "200px");
+            $(".restaurant-image").append(restaurantImg);
+
             console.log(getRating);
             //console.clear();
             response.businesses.forEach(function (e) {
@@ -114,6 +103,8 @@ $(document).ready(function () {
             } else {
               $(".restaurant-deliver").text("Pickup Only");
             }
+$(".wrapperOne").show();
+
           })
           .catch(function (error) {
             console.log(error);
@@ -165,6 +156,7 @@ $(document).ready(function () {
         console.log(movieSearchTerm);
         searchMovie(movieSearchTerm);
         $("#dropdownMenu3").text(movieSearchString);
+        $(".wrapperTwo").show();
       });
       // ----- TO DO ----
       // Randomize restaurant results - for loop
