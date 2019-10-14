@@ -1,11 +1,10 @@
-.container {
-  text-align: center;
-}
-s #formOne {
+
+#formOne {
   float: left;
   margin: 1em auto auto 1.25em;
 }
-s #dropdownMenu2 {
+
+#dropdownMenu2 {
   height: 50px;
   width: 15em;
   float: left;
@@ -21,6 +20,7 @@ s #dropdownMenu2 {
 
 #dropdownRow {
   margin: auto 1em auto 1em;
+  text-align: center;
 }
 
 #outputRow {
@@ -34,6 +34,9 @@ s #dropdownMenu2 {
   background: rgba(129, 141, 131, 0.5);
   padding: 5px 5px 5px 5px;
   margin-right: 5px;
+  width: 500px;
+  height: 500px;
+  float: left;
 }
 
 .wrapperTwo {
@@ -43,6 +46,15 @@ s #dropdownMenu2 {
   background: rgba(129, 141, 131, 0.5);
   padding: 5px 5px 5px 5px;
   margin-left: 5px;
+  width: 500px;
+  height: 500px;
+  float: right;
+
+}
+
+.movie-plot {
+  overflow: hidden;
+  text-overflow: ellipsis;
 
 }
 
