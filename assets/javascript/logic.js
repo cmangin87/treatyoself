@@ -15,6 +15,7 @@ $(document).ready(function () {
       var yelpKey =
         "WryFK_Fia6X6mI7Qo4GXKpsgXq28PtJo4fj-JCC53ggv5E7izVZ--ynGA62pamf8jZgp-o7nqhqV1EEODABa0bZYmHX8bI7S-DZMtDQv0Ws0WDImLt2JRL_u31OfXXYx";
       var yelpQueryURL = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search`;
+      var randomYelpURL = `https://api.yelp.com/v3/businesses/search`;
       var foodChoice = "";
 
       // ----- AJAX CALL FOR RESTAURANTS
@@ -158,6 +159,20 @@ $(".wrapperOne").show();
         $("#dropdownMenu3").text(movieSearchString);
         $(".wrapperTwo").show();
       });
+
+      $("#random").on("click", function() {
+        Swal.fire({
+          title: '<h2 style="color:chartreuse">RANDOMIZED!</h2>',
+          width: 500,
+          padding: '3em',
+          background: '#fff url("https://media.giphy.com/media/i1hiQy3uVZ0KQ/source.gif")',
+        });
+        randomMovie();
+        $(".wrapperTwo").show();
+        randomYelp();
+        $(".wrapperOne").show();
+
+      });
       // ----- TO DO ----
       // Randomize restaurant results - for loop
       // THERE IS A SECOND ADDRESS LINE FOR SUITE AND APARTMENTS, DON'T FORGET IN THE CSS.
@@ -235,5 +250,133 @@ $(".wrapperOne").show();
             $(".movie-title").prepend(getMovieName);
             $(".movie-plot").append(getMoviePlot);
           });
+        }
+
+        function randomMovie() {
+          var movieAPI = "9c78f7f7ceee5681298aabdde3007043";
+          var movieURL =
+            "https://api.themoviedb.org/3/discover/movie?api_key=" +
+            movieAPI;
+
+          $.ajax({
+            type: "GET",
+            url: movieURL,
+            header: {
+              authorization: "Bearer " + movieAPI
+            }
+          }).then(function (response) {
+            console.log(response);
+            console.log(movieURL);
+            var randomMovieIndex = Math.floor(
+              Math.random() * (response.results.length - 1)
+            );
+            var getMovieName = $(".movie-title").text(
+              response.results[randomMovieIndex].original_title
+            );
+
+            $("#movieImg").attr(
+              "src",
+              "https://image.tmdb.org/t/p/w200" +
+              response.results[randomMovieIndex].poster_path
+            );
+            var getMoviePlot = $(".movie-plot").text(
+              response.results[randomMovieIndex].overview
+            );
+            $(".movie-title").prepend(getMovieName);
+            $(".movie-plot").append(getMoviePlot);
+          });
+        };
+        function randomYelp() {
+          $.ajax({
+              type: "GET",
+              url: yelpQueryURL,
+              headers: {
+                Authorization: "Bearer " + yelpKey
+              },
+              data: {
+                term: "food",
+                location: "08873"
+              }
+            })
+            .then(function (response) {
+              console.log(response);
+              foodChoice = "";
+              $("#typeHere").val("");
+              console.log(foodChoice);
+              //console.table(response.businesses);
+              var randomIndex = Math.floor(
+                //Chris added this section from Kev //
+                Math.random() * (response.businesses.length - 1)
+              );
+              console.log(response);
+              var getName = $(".restaurant-name").text(
+                response.businesses[randomIndex].name
+              );
+              console.log(getName);
+
+              var getPrice = $(".restaurant-price").text(
+                response.businesses[randomIndex].price
+              );
+              console.log(getPrice);
+  
+              var getAddressStreetOne = $(".restaurant-address").text(
+                response.businesses[randomIndex].location.address1
+              );
+              console.log(getAddressStreetOne);
+  
+              var getAddressStreetTwo = $(".restaurant-address").append(
+                " " + response.businesses[randomIndex].location.address2
+              );
+              console.log(
+                getAddressStreetTwo
+              ); /* This is for the second address line. ie if there is an apartment number/suite number it'll list here. THIS NEEDS TO BE TESTED ON A WORKING SUITE/APRT ADDRESS*/
+  
+              var getAddressCity = $(".restaurant-address-city").text(
+                " " + response.businesses[randomIndex].location.city
+              );
+              console.log(getAddressCity);
+  
+              var getAddressZip = $(".restaurant-address-zip").text(
+                " " + response.businesses[randomIndex].location.zip_code
+              );
+              console.log(getAddressZip);
+  
+              var getPhone = $(".restaurant-phone").text(
+                "Phone: " + response.businesses[randomIndex].display_phone
+              );
+              console.log(getPhone);
+  
+              var getRating = $(".restaurant-rating").text(
+                "Rating: " + response.businesses[randomIndex].rating + "/5"
+              );
+  
+              $("#restaurantImg").attr("src", response.businesses[randomIndex].image_url);
+              $("#restaurantImg").attr("width", "200px");
+              $("#restaurantImg").attr("height", "200px");
+  
+              console.log(getRating);
+              //console.clear();
+              response.businesses.forEach(function (e) {
+                //console.table(e.transactions);
+              });
+  
+              console.log(response.businesses[randomIndex].transactions);
+              if (
+                response.businesses[randomIndex].transactions.indexOf("delivery") > -1
+              ) {
+                $(".restaurant-deliver").text("Delivery Available!");
+                console.log(
+                  response.businesses[randomIndex].transactions.indexOf("delivery")
+                );
+              } else {
+                $(".restaurant-deliver").text("Pickup Only");
+              }
+              
+              $(".wrapperOne").show();
+  
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
         }
       });
