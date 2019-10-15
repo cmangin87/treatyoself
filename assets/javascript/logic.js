@@ -122,7 +122,7 @@ $(".wrapperOne").show();
         } else {
           Swal.fire(
             'Oh no!',
-            'You forgot to input your zip code!',
+            'You need to input both the zip code AND your favorite food cuisine!',
             'error'
           );
         }
