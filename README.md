@@ -4,7 +4,7 @@
 
 ## What the app does?
 
-see [Treat Yo Self](https://github.com/jacobwilder/Project-1)
+see [Treat Yo Self](https://jacobwilder.github.io/Project-1/)
 
 > If you want to find really quick a great place to eat near you, chose your favorite type of cuisine insert your zip code and here you go, you have the best restaurant with your favorite food near you. Don't like that restaurant just click again for next option. After meal, feeling like to watch a movie, don't know what to chose, use our app to help you to find it. Pick a genre of movie that you want to watch tonight and we will give you the option of the movie.
 
