@@ -1,25 +1,48 @@
 nav {
   color: white;
+  font-size: 18px;
 }
-
 
 #formOne {
   float: left;
-  margin: 1em auto auto 1.25em;
+  margin: 1em auto auto 23.5em;
 }
 
-#dropdownMenu2 {
-  height: 50px;
-  width: 15em;
-  float: left;
-  margin: auto auto auto 1em;
+#typeHere {
+  border-radius: 6px;
 }
 
-#dropdownMenu3 {
-  height: 50px;
-  width: 15em;
-  float: right;
-  margin: auto 1em auto auto;
+#btnOne {
+  cursor: pointer;
+  margin-top: 4px;
+  border-style: 2px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: rgba(206, 206, 206, 0.247);
+  box-shadow: 1px 1px 18px rgb(255, 255, 255);
+}
+
+#btnOne:hover {
+  background-color: rgb(192, 192, 192);
+  opacity: 0.99;
+  transition: 0.3s;
+}
+
+#random {
+  cursor: pointer;
+  color: white;
+  border-style: 2px;
+  border-radius: 5px;
+  border-color: rgb(54, 91, 253);
+  box-shadow: 1px 1px 18px rgb(54, 91, 253);
+  background-color: rgb(54, 91, 253);
+  padding: 10px 40px 10px 40px;
+}
+
+#random:hover {
+  background-color: rgb(45, 75, 204);
+  opacity: 0.99;
+  transition: 0.3s;
 }
 
 #dropdownRow {
@@ -32,41 +55,85 @@ nav {
   text-align: center;
 }
 
-.wrapperOne {
-  border: 1px solid brown;
-  background-color: white;
-  background: rgba(129, 141, 131, 0.5);
-  padding: 5px 5px 5px 5px;
-  margin-right: 5px;
-  width: 500px;
-  height: 500px;
+/* ----- Restaurant Wrapper -----*/
+#dropdownMenu2 {
+  height: 50px;
+  width: 15em;
   float: left;
+  margin: auto auto auto 16.5em;
+  border: 1px solid;
+  border-color: rgba(255, 0, 0, 0.425);
+  box-shadow: 1px 1px 18px red; 
+}
+
+.wrapperOne {
+  margin-right: 8px;
+  background-color: white;
+  border: 1px solid rgba(65, 65, 65, 0.466);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.925);
+  width: 500px;
+  height: auto;
+}
+
+#restaurantImg {
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}
+
+.restaurant-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.restaurant-deliver {
+  font-size: 20;
+}
+
+.restaurant-rating {
+  margin-bottom: 10px;
+}
+
+/* ----- Movie Wrapper ----- */
+#dropdownMenu3 {
+  height: 50px;
+  width: 15em;
+  float: right;
+  margin: auto 16em auto auto;
+  border: 1px solid;
+  border-color: rgba(255, 255, 0, 0.247);
+  box-shadow: 1px 1px 18px yellow;
 }
 
 .wrapperTwo {
-
-  border: 1px solid brown;
+  margin-left: 8px;
   background-color: white;
-  background: rgba(129, 141, 131, 0.5);
-  padding: 5px 5px 5px 5px;
-  margin-left: 5px;
+  border: 1px solid rgba(65, 65, 65, 0.466);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.925);
+  margin-bottom: 50px;
   width: 500px;
-  height: 500px;
-  float: right;
+  height: auto;
+}
 
+#movieImg {
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 5%;
+}
+
+.movie-title {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .movie-plot {
-  overflow: hidden;
-  text-overflow: ellipsis;
-
+  margin-bottom: 10px;
 }
-
 
 /* Checking css connected to html */
 
 body {
-  background-image: url("popcornbg.jpg");
+  background-image: url("popcornbg_blur4.jpg");
   background-size: cover;
 }
 
@@ -75,13 +142,14 @@ html {
 }
 
 .footer {
-  background-color: rgb(48, 47, 47);
+  background-color: rgb(53, 52, 52);
   color: cornsilk;
   position: fixed;
   bottom: 0;
   width: 100%;
   margin: auto;
-  height: 2.5rem;
+  height: 2.25rem;
+  padding: 6px;
 }
 
 #privacy {
@@ -90,7 +158,357 @@ html {
   font-size: 1rem;
 }
 
-
 .collapse-navbar-collapse {
   color: white;
+}
+
+
+
+
+/* ---------- Media Queries ---------- */
+
+@media (max-width:980px) {
+  nav {
+    color: white;
+    font-size: 28px;
+  }
+
+  #formOne {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+  }
+  
+  #typeHere {
+    border-radius: 6px;
+    width: 100%;
+    height: 36px;
+  }
+  
+  #btnOne {
+    font-size: 20px;
+    width: 100%;
+    height: 34px;
+    cursor: pointer;
+    margin-top: 4px;
+    border-style: 3px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(170, 169, 169);
+    box-shadow: 1px 1px 18px rgb(255, 255, 255);
+  }
+  
+  #btnOne:hover {
+    background-color: rgb(192, 192, 192);
+    opacity: 0.99;
+    transition: 0.3s;
+  }
+  
+  #random {
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border-style: 2px;
+    border-radius: 5px;
+    border-color: rgb(54, 91, 253);
+    box-shadow: 1px 1px 18px rgb(54, 91, 253);
+    background-color: rgb(54, 91, 253);
+  }
+  
+  #random:hover {
+    background-color: rgb(45, 75, 204);
+    opacity: 0.99;
+    transition: 0.3s;
+  }
+  
+  #dropdownRow {
+    margin: auto 1em auto 1em;
+    text-align: center;
+  }
+  
+  #outputRow {
+    margin: 1em 1em auto 1em;
+    text-align: center;
+  }
+  
+  /* ----- Restaurant Wrapper -----*/
+  #dropdownMenu2 {
+    float: left;
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    border: 1px solid;
+    border-color: rgba(255, 0, 0, 0.425);
+    box-shadow: 1px 1px 18px red; 
+  }
+  
+  .wrapperOne {
+    width: 100% auto;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid rgba(65, 65, 65, 0.466);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.925);
+    height: auto;
+  }
+  
+  #restaurantImg {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+  }
+  
+  .restaurant-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .restaurant-deliver {
+    font-size: 20;
+  }
+  
+  .restaurant-rating {
+    margin-bottom: 10px;
+  }
+  
+  /* ----- Movie Wrapper ----- */
+  #dropdownMenu3 {
+    height: 50px;
+    width: 100%;
+    display:
+    margin: 0px;
+    border: 1px solid;
+    border-color: rgba(255, 255, 0, 0.247);
+    box-shadow: 1px 1px 18px yellow;
+  }
+  
+  .wrapperTwo {
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(65, 65, 65, 0.466);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.925);
+    margin-bottom: 50px;
+    height: auto;
+  }
+  
+  #movieImg {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5%;
+  }
+  
+  .movie-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .movie-plot {
+    margin-bottom: 10px;
+  }
+  
+  body {
+    background-image: url("popcornbg_blur10.jpg");
+    background-size: cover;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  .footer {
+    background-color: rgb(53, 52, 52);
+    color: cornsilk;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    height: 2.00rem;
+  }
+  
+  #privacy {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: .75rem;
+  }
+  
+  .collapse-navbar-collapse {
+    color: white;
+  }
+}
+
+
+
+
+
+          /* ---------- 640 ---------- */
+@media (max-width: 640px) {
+  nav {
+    color: white;
+    font-size: 28px;
+  }
+
+  #formOne {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+  }
+  
+  #typeHere {
+    border-radius: 6px;
+    width: 100%;
+    height: 36px;
+  }
+  
+  #btnOne {
+    font-size: 20px;
+    width: 100%;
+    height: 34px;
+    cursor: pointer;
+    margin-top: 4px;
+    border-style: 3px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(170, 169, 169);
+    box-shadow: 1px 1px 18px rgb(255, 255, 255);
+  }
+  
+  #btnOne:hover {
+    background-color: rgb(192, 192, 192);
+    opacity: 0.99;
+    transition: 0.3s;
+  }
+  
+  #random {
+    margin-top: 8px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border-style: 2px;
+    border-radius: 5px;
+    border-color: rgb(54, 91, 253);
+    box-shadow: 1px 1px 18px rgb(54, 91, 253);
+    background-color: rgb(54, 91, 253);
+  }
+  
+  #random:hover {
+    background-color: rgb(45, 75, 204);
+    opacity: 0.99;
+    transition: 0.3s;
+  }
+  
+  #dropdownRow {
+    margin: auto 1em auto 1em;
+    text-align: center;
+  }
+  
+  #outputRow {
+    margin: 1em 1em auto 1em;
+    text-align: center;
+  }
+  
+  /* ----- Restaurant Wrapper -----*/
+  #dropdownMenu2 {
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid;
+    border-color: rgba(255, 0, 0, 0.425);
+    box-shadow: 1px 1px 18px red; 
+  }
+  
+  .wrapperOne {
+    width: 100% auto;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid rgba(65, 65, 65, 0.466);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.925);
+    height: auto;
+  }
+  
+  #restaurantImg {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+  }
+  
+  .restaurant-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .restaurant-deliver {
+    font-size: 20;
+  }
+  
+  .restaurant-rating {
+    margin-bottom: 10px;
+  }
+  
+  /* ----- Movie Wrapper ----- */
+  #dropdownMenu3 {
+    height: 50px;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid;
+    border-color: rgba(255, 255, 0, 0.247);
+    box-shadow: 1px 1px 18px yellow;
+  }
+  
+  .wrapperTwo {
+    width: 99%;
+    background-color: white;
+    border: 1px solid rgba(65, 65, 65, 0.466);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.925);
+    margin-bottom: 50px;
+    margin-left: 0px;
+    height: auto;
+  }
+  
+  #movieImg {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5%;
+  }
+  
+  .movie-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .movie-plot {
+    margin-bottom: 10px;
+  }
+  
+  /* Checking css connected to html */
+  
+  body {
+    background-image: url("popcornbg_blur10.jpg");
+    background-size: cover;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  .footer {
+    background-color: rgb(53, 52, 52);
+    color: cornsilk;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    height: 2.00rem;
+  }
+  
+  #privacy {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: .75rem;
+  }
+  
+  .collapse-navbar-collapse {
+    color: white;
+  }
+
 }
