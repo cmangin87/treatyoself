@@ -81,7 +81,7 @@ $(document).ready(function () {
         console.log(getAddressZip);
 
         var getPhone = $(".restaurant-phone").text(
-          "Phone: " + response.businesses[randomIndex].phone
+          "Phone: " + response.businesses[randomIndex].display_phone
         );
         console.log(getPhone);
 
