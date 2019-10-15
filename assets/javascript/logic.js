@@ -154,7 +154,6 @@ $(".wrapperOne").show();
       $(".genre-search").on("click", function (event) {
         var movieSearchTerm = event.target.value;
         var movieSearchString = $(this).text();
-        console.log(movieSearchTerm);
         searchMovie(movieSearchTerm);
         $("#dropdownMenu3").text(movieSearchString);
         $(".wrapperTwo").show();
