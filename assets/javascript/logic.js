@@ -50,6 +50,11 @@ $(document).ready(function () {
         );
         console.log(getName);
 
+        var getPrice = $(".restaurant-price").text(
+          response.businesses[randomIndex].price
+        );
+        console.log(getPrice);
+
         var getAddressStreetOne = $(".restaurant-address").text(
           response.businesses[randomIndex].location.address1
         );
@@ -62,13 +67,16 @@ $(document).ready(function () {
           getAddressStreetTwo
         ); /* This is for the second address line. ie if there is an apartment number/suite number it'll list here. THIS NEEDS TO BE TESTED ON A WORKING SUITE/APRT ADDRESS*/
 
-        var getAddressCity = $(".restaurant-address-city").text(
+        var getAddressCity = $(".restaurant-city").text(
           " " + response.businesses[randomIndex].location.city
         );
         console.log(getAddressCity);
 
-        var getAddressZip = $(".restaurant-address-zip").text(
-          " " + response.businesses[randomIndex].location.zip_code
+        var getAddressState = $(".restaurant-city").append(", " + response.businesses[randomIndex].location.state);
+        console.log(getAddressState);
+
+        var getAddressZip = $(".restaurant-city").append(
+          ", " + response.businesses[randomIndex].location.zip_code
         );
         console.log(getAddressZip);
 
@@ -332,13 +340,16 @@ $(document).ready(function () {
           getAddressStreetTwo
         ); /* This is for the second address line. ie if there is an apartment number/suite number it'll list here. THIS NEEDS TO BE TESTED ON A WORKING SUITE/APRT ADDRESS*/
 
-        var getAddressCity = $(".restaurant-address-city").text(
+        var getAddressCity = $(".restaurant-city").text(
           " " + response.businesses[randomIndex].location.city
         );
         console.log(getAddressCity);
 
-        var getAddressZip = $(".restaurant-address-zip").text(
-          " " + response.businesses[randomIndex].location.zip_code
+        var getAddressState = $(".restaurant-city").append(", " + response.businesses[randomIndex].location.state);
+        console.log(getAddressState);
+
+        var getAddressZip = $(".restaurant-city").append(
+          ", " + response.businesses[randomIndex].location.zip_code
         );
         console.log(getAddressZip);
 
