@@ -7,6 +7,11 @@ html {
   height: 100%;
 }
 
+nav {
+  color: white;
+}
+
+
 .footer {
   background-color: rgb(48, 47, 47);
   color: cornsilk;
@@ -49,4 +54,5 @@ img {
 .card-body {
   background-color: rgba(169, 169, 169, 0.473);
 }
+
 ​
