@@ -9,8 +9,6 @@
 // The result is going to show up on the same page, where we won't see dropdown menus
 // we see right now.
 
-//--------------------- KEVS STUFF ------------------
-// --------------- VARS
 $(document).ready(function () {
   var yelpKey =
     "WryFK_Fia6X6mI7Qo4GXKpsgXq28PtJo4fj-JCC53ggv5E7izVZ--ynGA62pamf8jZgp-o7nqhqV1EEODABa0bZYmHX8bI7S-DZMtDQv0Ws0WDImLt2JRL_u31OfXXYx";
@@ -41,7 +39,6 @@ $(document).ready(function () {
         console.log(foodChoice);
         //console.table(response.businesses);
         var randomIndex = Math.floor(
-          //Chris added this section from Kev //
           Math.random() * (response.businesses.length - 1)
         );
         console.log(response);
@@ -65,7 +62,7 @@ $(document).ready(function () {
         );
         console.log(
           getAddressStreetTwo
-        ); /* This is for the second address line. ie if there is an apartment number/suite number it'll list here. THIS NEEDS TO BE TESTED ON A WORKING SUITE/APRT ADDRESS*/
+        );
 
         var getAddressCity = $(".restaurant-city").text(
           " " + response.businesses[randomIndex].location.city
@@ -137,17 +134,6 @@ $(document).ready(function () {
     }
   })
 
-  // Chris testing Kevin's randomization
-  // var randomArray = [];
-
-  // function RandoResults() {
-  //   for (i=0; i<response.length; i++) {
-  //     var randomText = response.businesses.results[randomIndex]
-  //   ;}
-  //   $("WHERE??").text(randomText);
-
-  // }
-
   $("#dropdownMenu2").on("click", function (event) {
     event.preventDefault();
   });
@@ -181,45 +167,6 @@ $(document).ready(function () {
     $(".wrapperOne").show();
 
   });
-  // ----- TO DO ----
-  // Randomize restaurant results - for loop
-  // THERE IS A SECOND ADDRESS LINE FOR SUITE AND APARTMENTS, DON'T FORGET IN THE CSS.
-  //--------------------- END KEVS STUFF ------------------
-
-
-  //-----Jake's Work-----//
-  //-----TO DO-----//
-  // Find a way to chain response modal with quiz complete modal
-  // input movie database API
-  //Edit CSS to reformat buttons and pages
-
-
-
-
-
-
-  // Chris testing Kevin's randomization
-  // var randomArray = [];
-
-  // function RandoResults() {
-  //   for (i=0; i<response.length; i++) {
-  //     var randomText = response.businesses.results[randomIndex]
-  //   ;}
-  //   $("WHERE??").text(randomText);
-
-  // }
-
-  // ----- TO DO ----
-  // Randomize restaurant results - for loop
-  // THERE IS A SECOND ADDRESS LINE FOR SUITE AND APARTMENTS, DON'T FORGET IN THE CSS.
-  //--------------------- END KEVS STUFF ------------------
-
-  //-----Jake's Work-----//
-  //-----TO DO-----//
-  // Find a way to chain response modal with quiz complete modal
-  // input movie database API
-  //Edit CSS to reformat buttons and pages
-
 
   // AJAX FUNCTION TMDB
 
@@ -314,7 +261,7 @@ $(document).ready(function () {
         console.log(foodChoice);
         //console.table(response.businesses);
         var randomIndex = Math.floor(
-          //Chris added this section from Kev //
+
           Math.random() * (response.businesses.length - 1)
         );
         console.log(response);
@@ -338,7 +285,7 @@ $(document).ready(function () {
         );
         console.log(
           getAddressStreetTwo
-        ); /* This is for the second address line. ie if there is an apartment number/suite number it'll list here. THIS NEEDS TO BE TESTED ON A WORKING SUITE/APRT ADDRESS*/
+        );
 
         var getAddressCity = $(".restaurant-city").text(
           " " + response.businesses[randomIndex].location.city
@@ -391,4 +338,76 @@ $(document).ready(function () {
         console.log(error);
       });
   }
+
+// Initialize Firebase 
+const config = {
+  apiKey: "AIzaSyDjC8K5PHrRVcL_GXYtFUFjMSWJT17uZxc",
+  authDomain: "happy-hour-a46f7.firebaseapp.com",
+  databaseURL: "https://happy-hour-a46f7.firebaseio.com",
+  projectId: "happy-hour-a46f7",
+  storageBucket: "happy-hour-a46f7.appspot.com",
+  messagingSenderId: "1020075149720",
+  appId: "1:1020075149720:web:c7ab7fde36b8ab6ae103ed"
+};
+
+firebase.initializeApp(config);
+
+var database = firebase.database();
+var movieInput = "";
+var foodInput = "";
+
+// Capture Button Click
+$(".btn-like").on("click", function (event) {
+  event.preventDefault();
+  console.log("Clicked")
+
+  // Grabbed values from text boxes
+  movieInput = $(".movie-title")
+    .text();
+  foodInput = $(".restaurant-name")
+    .text();
+
+  var ref = firebase.database().ref("/pairs");
+  var pair = {
+    movieName: $(".movie-title").text(),
+    moviePlot: $(".movie-plot").text(),
+    foodName: $(".restaurant-name").text(),
+    likes: 0
+  };
+  var found = false;
+
+  ref.once("value", pairs => { 
+    console.log("once value entered");
+
+    pairs.forEach(pair => { 
+      // get the key and data from the snapshot
+      const childKey = pair.key;
+      const childData = pair.val();
+      console.log(childKey);
+      console.log(childData);
+      console.log(childData.foodName);
+      console.log(foodInput);
+      console.log(childData.movieName);
+      console.log(movieInput);
+      if (childData.movieName === movieInput && childData.foodName === foodInput) {
+        console.log("Found it!!!!");
+        // setting 'found' to true must be placed before api
+        found = true;
+        console.log("found: " + found);
+        var likes = childData.likes;
+        likes++;
+
+        ref.child(childKey).update({
+          likes: likes
+        })
+      }
+    });
+    if (!found) {
+      console.log("found : " + found)
+      ref.push(pair);
+      console.log("object pushed to firebase");
+    }
+
+  });
+});
 });
