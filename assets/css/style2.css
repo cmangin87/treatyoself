@@ -1,16 +1,34 @@
 body {
   background-image: url("ent1.jpg");
   background-size: cover;
+  height: 50px;
 }
 
 html {
   height: 100%;
 }
 
+.card {
+  border-radius: 3%;
+}
+/* it's 2am im done*/
 nav {
   color: white;
+  font-size: 18px;
+  height: auto;
 }
 
+.nav-link, nav-link:visited{
+  color: rgb(214, 213, 213);
+}
+
+.nav-link:hover{
+  color:white;
+}
+
+.row{
+  margin: 0px;
+}
 
 .footer {
   background-color: rgb(53, 52, 52);
@@ -26,7 +44,8 @@ nav {
 #privacy {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  padding-top: 2px;
 }
 
 .card {
@@ -36,7 +55,6 @@ nav {
 }
 
 .column {
-  /* float: left; */
   width: 50%;
   padding: 10px;
   margin: 22px;

@@ -1,6 +1,15 @@
 nav {
   color: white;
   font-size: 18px;
+  height: auto;
+}
+
+.nav-link, nav-link:visited{
+  color: rgb(214, 213, 213);
+}
+
+.nav-link:hover{
+  color:white;
 }
 
 #formOne {
@@ -12,13 +21,42 @@ nav {
   border-radius: 6px;
 }
 
+.btn-like {
+  cursor: pointer;
+  margin-top: -20px;
+  color: white;
+  background-color: rgb(54, 91, 253);
+  margin-bottom: 8px;
+  font-family: 'Segoe UI';
+  border-style: 2px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: rgba(206, 206, 206, 0.247);
+  box-shadow: 2px 2px 18px rgb(113, 161, 250);
+}
+
+.btn-like:hover {
+  background-color: rgb(17, 73, 179);
+  opacity: 0.99;
+  transition: 0.3s;
+}
+
+.btn-like:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(8px);
+  font-weight: bold;
+}
+
 #btnOne {
   cursor: pointer;
   margin-top: 4px;
   border-style: 2px;
   border-radius: 5px;
   border: 1px solid;
-  border-color: rgba(206, 206, 206, 0.247);
+  border-color: rgba(163, 163, 163, 0.644);
   box-shadow: 1px 1px 18px rgb(255, 255, 255);
 }
 
@@ -29,7 +67,6 @@ nav {
 }
 
 #random {
-  cursor: pointer;
   color: white;
   border-style: 2px;
   border-radius: 5px;
@@ -161,15 +198,12 @@ html {
   color: white;
 }
 
-
-
 /* ---------- Media Queries ---------- */
 
 
 /* ----------------- 1600 -------------- */
 @media (max-width: 1600px) {
   nav {
-    color: rgb(255, 255, 255);
     font-size: 28px;
   }
 
@@ -180,7 +214,6 @@ html {
   }
 
   #typeHere {
-    border-radius: 6px;
     width: 100%;
     height: 36px;
   }
@@ -189,37 +222,13 @@ html {
     font-size: 20px;
     width: 100%;
     height: 34px;
-    cursor: pointer;
     margin-top: 4px;
-    border-style: 3px;
-    border-radius: 5px;
-    border: 1px solid;
-    border-color: rgb(170, 169, 169);
-    box-shadow: 1px 1px 18px rgb(255, 255, 255);
-  }
-
-  #btnOne:hover {
-    background-color: rgb(192, 192, 192);
-    opacity: 0.99;
-    transition: 0.3s;
   }
 
   #random {
     font-size: 20px;
     width: 100%;
     cursor: pointer;
-    color: white;
-    border-style: 2px;
-    border-radius: 5px;
-    border-color: rgb(54, 91, 253);
-    box-shadow: 1px 1px 18px rgb(54, 91, 253);
-    background-color: rgb(54, 91, 253);
-  }
-
-  #random:hover {
-    background-color: rgb(45, 75, 204);
-    opacity: 0.99;
-    transition: 0.3s;
   }
 
   #dropdownRow {
@@ -237,18 +246,11 @@ html {
     height: 50px;
     width: 100%;
     margin: auto;
-    border: 1px solid;
-    border-color: rgba(255, 0, 0, 0.425);
-    box-shadow: 1px 1px 18px red;
   }
 
   .wrapperOne {
     width: 100% auto;
     margin-bottom: 30px;
-    background-color: white;
-    border: 1px solid rgba(65, 65, 65, 0.466);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.925);
     height: auto;
   }
 
@@ -275,20 +277,11 @@ html {
     height: 50px;
     width: 100%;
     margin: auto;
-    border: 1px solid;
-    border-color: rgba(255, 255, 0, 0.247);
-    box-shadow: 1px 1px 18px yellow;
   }
 
   .wrapperTwo {
     width: 99%;
-    background-color: white;
-    border: 1px solid rgba(65, 65, 65, 0.466);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.925);
-    margin-bottom: 50px;
     margin-left: 0px;
-    height: auto;
   }
 
   #movieImg {
@@ -315,12 +308,6 @@ html {
   }
 
   .footer {
-    background-color: rgb(53, 52, 52);
-    color: cornsilk;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
     height: 2.00rem;
   }
 
@@ -336,10 +323,8 @@ html {
 }
 
 /* ----------------- 960 ------------- */
-
 @media (max-width: 960px) {
   nav {
-    color: rgb(255, 255, 255);
     font-size: 28px;
   }
 
@@ -350,7 +335,6 @@ html {
   }
 
   #typeHere {
-    border-radius: 6px;
     width: 100%;
     height: 36px;
   }
@@ -359,38 +343,20 @@ html {
     font-size: 20px;
     width: 100%;
     height: 34px;
-    cursor: pointer;
     margin-top: 4px;
-    border-style: 3px;
-    border-radius: 5px;
-    border: 1px solid;
-    border-color: rgb(170, 169, 169);
-    box-shadow: 1px 1px 18px rgb(255, 255, 255);
   }
 
-  #btnOne:hover {
-    background-color: rgb(192, 192, 192);
-    opacity: 0.99;
-    transition: 0.3s;
+  .btn-like {
+    margin-top: -10px;
+    height: 55px;
+    width: 55px;
+    font-size: 16px;
   }
 
   #random {
     font-size: 20px;
     width: 100%;
-    cursor: pointer;
-    color: white;
-    border-style: 2px;
-    border-radius: 5px;
-    border-color: rgb(54, 91, 253);
-    box-shadow: 1px 1px 18px rgb(54, 91, 253);
-    background-color: rgb(54, 91, 253);
     margin-bottom: 10px;
-  }
-
-  #random:hover {
-    background-color: rgb(45, 75, 204);
-    opacity: 0.99;
-    transition: 0.3s;
   }
 
   #dropdownRow {
@@ -408,18 +374,11 @@ html {
     height: 50px;
     width: 100%;
     margin: auto;
-    border: 1px solid;
-    border-color: rgba(255, 0, 0, 0.425);
-    box-shadow: 1px 1px 18px red;
   }
 
   .wrapperOne {
     width: 100% auto;
     margin-bottom: 30px;
-    background-color: white;
-    border: 1px solid rgba(65, 65, 65, 0.466);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.925);
     height: auto;
   }
 
@@ -446,20 +405,10 @@ html {
     height: 50px;
     width: 100%;
     margin: auto;
-    border: 1px solid;
-    border-color: rgba(255, 255, 0, 0.247);
-    box-shadow: 1px 1px 18px yellow;
   }
 
   .wrapperTwo {
     width: 100%;
-    background-color: white;
-    border: 1px solid rgba(65, 65, 65, 0.466);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.925);
-    margin-bottom: 50px;
-    margin-left: 0px;
-    height: auto;
   }
 
   #movieImg {
@@ -479,7 +428,6 @@ html {
   body {
     background-image: url("popcornbg_blur10.jpg");
     background-size: cover;
-
   }
 
   html {
@@ -487,12 +435,6 @@ html {
   }
 
   .footer {
-    background-color: rgb(53, 52, 52);
-    color: cornsilk;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
     height: 2.00rem;
   }
 
@@ -507,13 +449,9 @@ html {
   }
 }
 
-
-
 /* ------------- 640 ------------- */
-
 @media (max-width: 640px) {
   nav {
-    color: white;
     font-size: 28px;
   }
 
@@ -524,7 +462,6 @@ html {
   }
 
   #typeHere {
-    border-radius: 6px;
     width: 100%;
     height: 36px;
   }
@@ -533,38 +470,20 @@ html {
     font-size: 20px;
     width: 100%;
     height: 34px;
-    cursor: pointer;
     margin-top: 4px;
-    border-style: 3px;
-    border-radius: 5px;
-    border: 1px solid;
-    border-color: rgb(170, 169, 169);
-    box-shadow: 1px 1px 18px rgb(255, 255, 255);
   }
 
-  #btnOne:hover {
-    background-color: rgb(192, 192, 192);
-    opacity: 0.99;
-    transition: 0.3s;
+  .btn-like {
+    margin-top: -10px;
+    height: 50px;
+    width: 50px;
+    font-size: 14px;
   }
 
   #random {
     margin-top: 8px;
     font-size: 20px;
     width: 100%;
-    cursor: pointer;
-    color: white;
-    border-style: 2px;
-    border-radius: 5px;
-    border-color: rgb(54, 91, 253);
-    box-shadow: 1px 1px 18px rgb(54, 91, 253);
-    background-color: rgb(54, 91, 253);
-  }
-
-  #random:hover {
-    background-color: rgb(45, 75, 204);
-    opacity: 0.99;
-    transition: 0.3s;
   }
 
   #dropdownRow {
@@ -582,18 +501,11 @@ html {
     height: 50px;
     width: 100%;
     margin: auto;
-    border: 1px solid;
-    border-color: rgba(255, 0, 0, 0.425);
-    box-shadow: 1px 1px 18px red;
   }
 
   .wrapperOne {
     width: 100% auto;
     margin-bottom: 30px;
-    background-color: white;
-    border: 1px solid rgba(65, 65, 65, 0.466);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.925);
     height: auto;
   }
 
@@ -620,20 +532,10 @@ html {
     height: 50px;
     width: 100%;
     margin: 20px auto;
-    border: 1px solid;
-    border-color: rgba(255, 255, 0, 0.247);
-    box-shadow: 1px 1px 18px yellow;
   }
 
   .wrapperTwo {
     width: 99%;
-    background-color: white;
-    border: 1px solid rgba(65, 65, 65, 0.466);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.925);
-    margin-bottom: 50px;
-    margin-left: 0px;
-    height: auto;
   }
 
   #movieImg {
@@ -650,35 +552,22 @@ html {
     margin-bottom: 10px;
   }
 
-  /* Checking css connected to html */
-
   body {
     background-image: url("popcornbg_blur10.jpg");
     background-size: cover;
   }
 
-  html {
-    height: 100%;
-  }
-
   .footer {
-    background-color: rgb(53, 52, 52);
-    color: cornsilk;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
-    height: 2.00rem;
+    height: 1.75rem;
   }
 
   #privacy {
     text-align: center;
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: .75rem;
+    font-size: .60rem;
   }
 
   .collapse-navbar-collapse {
     color: white;
   }
-
 }
